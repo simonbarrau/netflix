@@ -1,29 +1,73 @@
+//TMDB
+ const apiKey='api_key=5fe970e05084b10c3a5635e9e19b3fe7';
+ const baseUrl= 'https://api.themoviedb.org/3';
+ const apiUrl= baseUrl + '/discover/movie?sort_by=popularity.desc&' + apiKey;
+ const imageUrl= 'https://image.tmdb.org/t/p/w500';
+ const searchUrl= baseUrl + '/search/movie?' + apiKey;
+const main= document.getElementById('main');
+const form = document.getElementById('form');
+const search= document.getElementById('search');
 
-const clave= prompt("adivina la clave o sos cornudo")
 
-if(clave !== "-10"){
-    alert("perdoneme pero por ahora usted es cornudo, pista: es un numero")
-}else{
-    alert(" si la adivinaste aca es xq sos un puto nazi!")
-}
-const clave2=prompt("dale adivinaaa");
- if (clave2 !=="-10"){
-    alert("Seguis siendo cornudo boludoo, ADIVINAAA LA CLAVEE. Otra pista:  es numero negativo")
-}else{
-    alert(" Bieeeen! No sos cornudo, te salvaste! podes ir al donpla con los pibes 😁😎")
-}
+getMovies(apiUrl);
 
-const clave3= prompt("sos boludoo???, dale adivina")
+ function getMovies(url){
 
-if(clave3 !== "-10") {
-alert("bueno, parece q toca volver al gym. Te doy otra pista: Es un numero usado por los mejores jugadores de la seleccion, pero negativo")
-}else{
-    alert(" Vamaaaa, te saluda brianeitor! salame")
-}
+    fetch(url).then(res => res.json()).then(data => { 
+      console.log(data.results);
+        showMovies(data.results) ;
+        
+        
+ })
+ }
 
-const clave4=prompt("si no la sacas ahora es xq queres ser cornudo")
-if(clave4 !== "-10"){
-    alert("Listo perdiste x la cara de dolobu")
-} else{
-    alert(" Bieeeen! te llevo 4 intentos pero lo bueno es q te salvaste!")
-}
+ function showMovies(data){
+
+main.innerHTML='';
+    data.forEach(
+        movie => {
+            const{title,poster_path,vote_average,overview}= movie;
+            const movieEl= document.createElement('div');
+            movieEl.classList.add('movie');
+            movieEl.innerHTML=`
+            <img src="${imageUrl + poster_path}"   alt="${title}">
+    
+            <div class="movie-info">
+                <h3>${title}</h3>
+                <span class="${getColor(vote_average)}">${vote_average}</span>
+            </div>
+    
+            
+            <h3 class="overview">overview</h3>
+            <div class="overview">
+                ${overview}
+            </div>
+        `
+
+        main.appendChild(movieEl);
+
+        }
+    )
+ }
+
+ function getColor(vote){
+    if(vote >= 6.8){
+        return'green'
+    }else if (vote >= 5 ) {
+    return 'orange'
+    } else{
+        return'red'
+    }
+ }
+
+ form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if(searchTerm){
+        getMovies(searchUrl + '&query=' + searchTerm)
+    }else{
+        getMovies(apiUrl);
+    }
+ })
