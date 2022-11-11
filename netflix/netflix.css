@@ -1,3 +1,8 @@
 body{
     background-color: aqua;
 }
+
+#boton{
+    margin-left: 45%;
+    margin-top: 20%;
+}
