@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+
+
+
+.netflix{
+    color: red;
+    text-align: center;
+    margin-top: 23%;
+    font-weight: 900;
+    font-size: 4em;
+    letter-spacing: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 0.195em red, 0 0 0.128em red;
+
+
+
+
+}
+
+.netflix::after{
+    content: '';
+    display: block;
+    margin-left: 42%;
+    background-color: red;
+    height: 80px;
+    width: 200px;
+    box-shadow: 0 0 40px 0.1em red;
+    transform: perspective(0.8em) rotateX(40deg) scale(1, 0.45);
+    filter: blur(0.8em);
+
+}
+
+.redirec{
+text-decoration: none;}

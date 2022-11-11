@@ -1,0 +1,130 @@
+body{
+    background-color: black;
+}
+
+.quien{
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ul{
+    display: flex;
+    margin-left: 18%;
+    color: transparent;
+
+    
+}
+.barney{
+    border: 1px black solid;
+    background-color: yellow;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.marge{
+    border: 1px black solid;
+    background-color: lightblue;
+    width: 130px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 10px;
+    
+}
+.bart{
+    border: 1px black solid;
+    background-color: red;
+    width: 130px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 10px;
+
+    
+}
+.lisa{
+    border: 1px black solid;
+    background-color: rgb(255, 3, 205);
+    width: 130px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 10px;
+
+    
+}
+
+.maggie{
+    border: 1px black solid;
+    background-color: green;
+    width: 130px;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 10px;
+
+    
+}
+
+h6{
+    color: grey;
+    margin-left: 35%;
+    font-weight: 900;
+    font-size: 1em;
+    margin-top: 0px;
+}
+
+h6:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.button{
+    margin-left: 45%;
+    border: 2px solid red;
+    height: 55px;
+    width: 120px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: ease-in 0.4s;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 2px black solid;
+    background-color: black;
+    color: black;
+    transition: ease-in 0.004s;
+
+}
+
+u:hover{
+    border: 1px solid white;
+}
+.barney:hover{
+    border: 5px white solid;
+}
+
+.marge:hover{
+    border: 5px white solid;
+
+}
+.maggie:hover{
+    border: 5px white solid;
+
+}
+.bart:hover{
+    border: 5px white solid;
+
+}
+.lisa:hover{
+    border: 5px white solid;
+    
+}
+
+.redirec{
+    text-decoration: none;}
