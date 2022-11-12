@@ -5,8 +5,8 @@
 }
 
 :root{
-    --primary-color:#22254b;
-    --secondary-color: #373b69;
+    --primary-color:#0d0d0f;
+    --secondary-color: #000000;
 }
 
 body{
@@ -31,7 +31,7 @@ body{
 }
 
 .search::placeholder{
-    color: #7378c5;
+    color: #da0f0f;
 }
 
 main{
@@ -45,7 +45,8 @@ main{
     height: 540px;
     margin: 1rem;
     border-radius: 3px;
-    box-shadow: 0.2px 4px 5px black;
+    box-shadow: 6px 6px   black;
+    
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
@@ -97,6 +98,7 @@ main{
     max-height: 100%;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+    color: white;
 }
 
 .movie:hover .overview{
