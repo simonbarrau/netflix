@@ -105,7 +105,7 @@ transform: translateY(-100%);
 margin: 0;
 }
 .progress-container {
-background-color: #fff;
+background-color: grey;
 border: 5px;
 cursor: pointer;
 margin: 10px 0;
@@ -113,9 +113,52 @@ height: 4px;
 width: 100%;
 }
 .progress {
-background-color: #fe8daa;
+background-color: black;
 border-radius: 5px;
 height: 100%;
 width: 0%;
 transform: width 0.1s linear;
+}
+
+
+#form{
+    padding: 0.2rem;
+    display: flex;
+    
+}
+
+.logo{
+    height: 80px;
+   border-radius: 100%;
+}
+
+
+.tech{
+    color: black;
+        font-size: 20px;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 0 0 1.99em var(--clr-neon), 0 0 0.800em var(--clr-neon);
+    margin-top: 23px;
+    margin-left: 2%;
+
+}
+
+.techo{
+    margin-left: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:black;
+    font-family: inherit;
+    margin-left: 40%;
 }
